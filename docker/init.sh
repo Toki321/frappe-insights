@@ -24,16 +24,16 @@ sed -i '/watch/d' ./Procfile
 
 bench get-app insights
 
-bench new-site insights.localhost \
+bench new-site 13.51.56.246 \
 --force \
 --mariadb-root-password 123 \
 --admin-password admin \
 --no-mariadb-socket
 
-bench --site insights.localhost install-app insights
-bench --site insights.localhost set-config developer_mode 1
-bench --site insights.localhost clear-cache
-bench --site insights.localhost set-config mute_emails 1
-bench use insights.localhost
+bench --site 13.51.56.246 install-app insights
+bench --site 13.51.56.246 set-config developer_mode 1
+bench --site 13.51.56.246 clear-cache
+bench --site 13.51.56.246 set-config mute_emails 1
+bench use 13.51.56.246
 
 bench start
